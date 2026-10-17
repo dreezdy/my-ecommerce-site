@@ -1,0 +1,219 @@
+.admin-page {
+    max-width: 1000px;
+    min-height: 60vh;
+    margin: 0 auto;
+    padding: 50px 24px 80px;
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    font-size: 28px;
+    color: #171717;
+}
+
+.admin-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff4141;
+    color: #ffffff;
+    border: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.admin-button:hover {
+    background: #e63636;
+}
+
+.admin-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.admin-link-button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    color: #454545;
+    font-family: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.admin-link-button:hover {
+    border-color: #ff4141;
+    color: #ff4141;
+}
+
+.admin-delete {
+    padding: 8px 16px;
+    border: 1px solid #f3b4b4;
+    background: #ffffff;
+    color: #d93025;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.admin-delete:hover:not(:disabled) {
+    background: #fdeaea;
+}
+
+.admin-delete:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Table */
+.admin-table-wrap {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    padding: 10px;
+    border-bottom: 2px solid #ebebeb;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #777777;
+    white-space: nowrap;
+}
+
+.admin-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #ebebeb;
+    vertical-align: middle;
+    color: #454545;
+}
+
+.admin-thumb {
+    display: block;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    background: #fafafa;
+}
+
+.admin-capitalize {
+    text-transform: capitalize;
+}
+
+.admin-old-price {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.admin-empty {
+    padding: 60px 0;
+    text-align: center;
+    color: #777777;
+}
+
+/* Messages */
+.admin-message {
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.admin-message-success {
+    background: #e9f8ee;
+    color: #1b7f3b;
+}
+
+.admin-message-error {
+    background: #fdeaea;
+    color: #b3261e;
+}
+
+/* Form */
+.admin-form {
+    max-width: 560px;
+}
+
+.admin-label {
+    display: block;
+    margin: 18px 0 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #454545;
+}
+
+.admin-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.admin-input:focus {
+    outline: none;
+    border-color: #ff4141;
+}
+
+.admin-row {
+    display: flex;
+    gap: 16px;
+}
+
+.admin-row > div {
+    flex: 1;
+}
+
+.admin-hint {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #777777;
+}
+
+.admin-preview {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 10px;
+    border: 1px solid #ebebeb;
+    background: #fafafa;
+    object-fit: contain;
+}
+
+.admin-submit {
+    margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+    .admin-header h1 {
+        font-size: 22px;
+    }
+    .admin-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

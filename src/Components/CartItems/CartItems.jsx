@@ -4,7 +4,7 @@ import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Assets/cart_cross_icon.png'
 
 export const CartItems = () => {
-    const {getTotalCartAmount,all_product,cartItems,removeFromCart} = useContext(ShopContext);
+    const {getTotalCartAmount,all_product,cartItems,removeFromCart,addToCart,deleteFromCart} = useContext(ShopContext);
   return (
     <div className='cartitems'>
         <div className="cartitems-format-main">
@@ -19,14 +19,32 @@ export const CartItems = () => {
         {all_product.map((e)=>{
             if(cartItems[e.id]>0)
             {
-                return <div>
+                return <div key={e.id}>
                             <div className="cartitems-format cartitems-format-main">
                                 <img src={e.image} alt="" className='carticon-product-icon' />
                                 <p>{e.name}</p>    
                                 <p>₦{e.new_price}</p>
-                                <button className='carditems-quantity'>{cartItems[e.id]}</button> 
+                                <div className="cartitems-stepper">
+                                    <button
+                                        type="button"
+                                        aria-label="Decrease quantity"
+                                        onClick={()=>{removeFromCart(e.id)}}
+                                        disabled={cartItems[e.id] <= 1}
+                                    >
+                                        −
+                                    </button>
+                                    <span>{cartItems[e.id]}</span>
+                                    <button
+                                        type="button"
+                                        aria-label="Increase quantity"
+                                        onClick={()=>{addToCart(e.id)}}
+                                        disabled={cartItems[e.id] >= 99}
+                                    >
+                                        +
+                                    </button>
+                                </div> 
                                 <p>₦{e.new_price*cartItems[e.id]}</p>
-                                <img className='remove_icon' src={remove_icon} onClick={()=>{removeFromCart(e.id)}} alt="" />   
+                                <img className='remove_icon' src={remove_icon} onClick={()=>{deleteFromCart(e.id)}} alt="" />   
                             </div>  
                             <hr />
                         </div>

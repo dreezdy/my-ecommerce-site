@@ -28,10 +28,43 @@
     gap: 30px;
 }
 
+/* Give each card a fixed width again (same sizes as your original Item) */
+.relatedproducts-item .item {
+    width: 280px;
+}
+
+@media (max-width: 1280px) {
+    .relatedproducts-item .item {
+        width: 220px;
+        font-size: 14px;
+    }
+}
 
 @media (max-width: 1200px) {
     .relatedproducts-item {
         flex: 1 1 30%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .relatedproducts-item .item {
+        width: 170px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    .relatedproducts-item .item {
+        width: 140px;
+        font-size: 12px;
+    }
+
+    .relatedproducts {
+        height: auto;
+    }
+
+    .relatedproducts img {
+        height: 210px;
     }
 }
 
@@ -48,5 +81,17 @@
 
     .relatedproducts h1 {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .relatedproducts-item .item {
+        width: 160px;
+    }
+}
+
+@media (max-width: 350px) {
+    .relatedproducts img {
+        height: 170px;
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.css'
+import { Link } from 'react-router-dom';
 import arrow_icon from '../Assets/arrow_icon.png'
 import hero_image from '../Assets/hero_image3.png'
 import hero_image1 from '../Assets/hero_image.jpg'
@@ -25,12 +26,12 @@ export const Hero = () => {
                         Consider your lifestyle favourite scents, and the impression you want to leave. 
                     </p>
                 </div>
-                <div className="hero-latest-btn">
+                <Link to="/shop" className="hero-latest-btn">
                     <div>
                         Explore Shop
                     </div>
                     <img src={arrow_icon} alt="" />
-                </div>
+                </Link>
             </div>
 
             <div className="hero-right">
@@ -62,12 +63,12 @@ export const Hero = () => {
                 <div>
                     <h3>YSL Black Opium</h3>
                     <p>(27 items)</p>
-                    <div className="hero-bottom-btn">
+                    <Link to="/shop" className="hero-bottom-btn">
                         <div>
                             Explore Shop
                         </div>
                         <img src={arrow_icon} alt="" className='hero-cardicon'/>
-                    </div>
+                    </Link>
                 </div>
             </div>
 
@@ -76,12 +77,12 @@ export const Hero = () => {
                 <div>
                     <h3>Valentino Donna Born</h3>
                     <p>(45 items)</p>
-                    <div className="hero-bottom-btn">
+                    <Link to="/shop" className="hero-bottom-btn">
                         <div>
                             Explore Shop
                         </div>
                         <img src={arrow_icon} alt="" className='hero-cardicon'/>
-                    </div>
+                    </Link>
                 </div>
             </div>
 

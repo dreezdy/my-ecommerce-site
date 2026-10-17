@@ -1,124 +1,217 @@
-.loginsignup {
+
+/* ===== Login / Sign up page (styled after the Aceternity signup form) ===== */
+
+.auth-page {
     width: 100%;
-    height: 80vh;
-    background: #fce3fe;
-    padding-top: 100px;
+    min-height: 80vh;
+    /* background: #fce3fe; */
+    background: url("../../Components/Assets/feather_bg.jpg") no-repeat center center;
+    padding: 80px 16px 60px;
 }
 
-.loginsignup-container {
-    width: 580px;
-    height: 600px;
-    background: white;
-    margin: auto;
-    padding: 40px 60px;
+.auth-card {
+    width: 100%;
+    max-width: 448px;
+    margin: 0 auto;
+    background: #ffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow:
+        0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+        0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+        0px 0px 0px 1px rgba(25, 28, 33, 0.08);
 }
 
-
-.loginsignup-container h1 {
-    margin: 20px 0px;
+.auth-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #262626;
 }
 
-.loginsignup-fields {
+.auth-subtitle {
+    margin-top: 8px;
+    max-width: 340px;
+    font-size: 14px;
+    color: #525252;
+}
+
+.auth-form {
+    margin-top: 32px;
+}
+
+/* First name + Last name side by side */
+.auth-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.auth-row .auth-field {
+    margin-bottom: 0;
+}
+
+.auth-field {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 16px;
 }
 
-.loginsignup-fields input {
-    width: 100%;
-    height: 52px;
-    border-radius: 10px;
-    border: 1px solid #c9c9c9;
-    padding: 0px 20px;
-    outline: none;
-    font-size: 18px;
-    color: #5c5c5c;
-}
-
-.loginsignup-container button {
-    width: 100%;
-    height: 52px;
-    background: #ff4141;
-    border: none;
-    color: white;
-    font-size: 18px;
+.auth-label {
+    font-size: 14px;
     font-weight: 500;
-    border-radius: 10px;
-    margin-top: 30px;
+    color: #262626;
+}
+
+.auth-input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background: #f9fafb;
+    padding: 0 12px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #000000;
+    box-shadow:
+        0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+        0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+        0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+    transition: box-shadow 0.2s;
+}
+
+.auth-input::placeholder {
+    color: #a3a3a3;
+}
+
+.auth-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #a3a3a3;
+}
+
+.auth-hint {
+    font-size: 12px;
+    color: #737373;
+}
+
+.auth-agree {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 4px 0 16px;
+    font-size: 13px;
+    color: #525252;
     cursor: pointer;
 }
 
-.loginsignup-login {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #5c5c5c;
+.auth-agree input {
+    margin-top: 3px;
+    accent-color: #171717;
 }
 
-.loginsignup-login span {
-    color: #ff4141;
+.auth-error {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #dc2626;
+}
+
+.auth-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(to bottom right, #000000, #525252);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow:
+        0px 1px 0px 0px #ffffff40 inset,
+        0px -1px 0px 0px #ffffff40 inset;
+}
+
+.auth-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Glowing lines under the button */
+.auth-glow {
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    height: 1px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.auth-glow-cyan {
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #06b6d4, transparent);
+}
+
+.auth-glow-indigo {
+    left: 40px;
+    right: 40px;
+    width: 50%;
+    height: 4px;
+    margin: 0 auto;
+    background: linear-gradient(to right, transparent, #6366f1, transparent);
+    filter: blur(5px);
+}
+
+.auth-button:hover:not(:disabled) .auth-glow {
+    opacity: 1;
+}
+
+.auth-divider {
+    height: 1px;
+    width: 100%;
+    margin: 32px 0 24px;
+    background: linear-gradient(to right, transparent, #d4d4d4, transparent);
+}
+
+.auth-switch {
+    text-align: center;
+    font-size: 14px;
+    color: #525252;
+}
+
+.auth-switch span {
+    color: #171717;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: underline;
 }
 
-.loginsignup-agree {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    gap: 20px;
-    color: #5c5c5c;
-    font-size: 14px;
-    /* font-weight: 500; */
-}
-
-@media (max-width:1280px) {
-    .loginsignup {
+@media (max-width: 1280px) {
+    .auth-page {
         padding-top: 50px;
     }
-    .loginsignup-container{
-        width: auto;
-        max-width: 500px;
-        max-height: 530px;
-    }
-    .loginsignup-container h1{
-        margin: 10px 0px;
-    }
-    .loginsignup-fields {
-        gap: 20px;
-        margin-top: 20px;
-    }
-    .loginsignup-fields input {
-        height: 50px;
-        width: 100%;
-    }
-    .loginsignup-container button{
-        width: 100%;
-    } 
-    .loginsignup-login{
-        font-size: 16px;
-    }
-    .loginsignup-agree {
-        font-size: 14px;
-        gap: 10px;
-    }
 }
 
-@media (max-width: 800px) {
-    .loginsignup-container{
-        padding: 20px 30px;
+@media (max-width: 520px) {
+    .auth-page {
+        padding: 30px 12px 40px;
     }
-    .loginsignup-container h1{
-        font-size: 24px;
+    .auth-card {
+        padding: 24px 20px;
     }
-    .loginsignup-fields{
-        margin-top: 20px;
+    .auth-row {
+        flex-direction: column;
+        gap: 16px;
     }
-    .loginsignup-fields input{
-        height: 50px;
-    }
-    .loginsignup-container button {
-        height: 50px;
+    /* 16px stops iPhones from zooming in when you tap a field */
+    .auth-input {
         font-size: 16px;
     }
 }
