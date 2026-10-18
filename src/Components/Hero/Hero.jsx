@@ -62,7 +62,7 @@ export const Hero = () => {
                 <img src={hero_image1} alt="" className='hero-bottom-img'/>
                 <div>
                     <h3>YSL Black Opium</h3>
-                    <p>(27 items)</p>
+                    {/* <p>(27 items)</p> */}
                     <Link to="/shop" className="hero-bottom-btn">
                         <div>
                             Explore Shop
@@ -76,7 +76,7 @@ export const Hero = () => {
                 <img src={perf_img} alt="" className='hero-bottom-img'/>
                 <div>
                     <h3>Valentino Donna Born</h3>
-                    <p>(45 items)</p>
+                    {/* <p>(45 items)</p> */}
                     <Link to="/shop" className="hero-bottom-btn">
                         <div>
                             Explore Shop

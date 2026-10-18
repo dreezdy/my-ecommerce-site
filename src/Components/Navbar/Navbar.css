@@ -356,7 +356,7 @@
     }
 }
 
-@media(max-width:700px) {
+@media(max-width:770px) {
     .navbar {
         padding: 10px 4%;
     }
@@ -469,7 +469,6 @@
 }
 
 @media(prefers-reduced-motion:reduce) {
-
     .nav-li::after,
     .nav-dropdown {
         transition: none;

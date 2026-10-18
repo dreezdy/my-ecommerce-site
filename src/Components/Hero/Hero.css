@@ -74,7 +74,8 @@
 }
 
 .hero-latest-btn img {
-    width: 50px;
+    width: 35px;
+    height: 35px;
     background-color: white;
     padding: 5px;
     border-radius: 50%;
@@ -129,7 +130,8 @@
 }
 
 .hero-cardicon {
-    width: 40px;
+    width: 25px;
+    height: 25px;
     background-color: white;
     padding: 5px;
     border-radius: 50%;
